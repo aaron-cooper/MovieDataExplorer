@@ -13,7 +13,7 @@ _HDR_FILES=$(patsubst %,$(HDR_DIR)%,$(HDR_FILES))
 _OBJ_FILES=$(patsubst %.c,$(OBJ_DIR)%.o,$(SRC_FILES))
 
 
-a3: $(_OBJ_FILES)
+MDE: $(_OBJ_FILES)
 	$(CC) -o $(EXE_DIR)$@ $^ $(CFLAGS)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(_HDR_FILES)
